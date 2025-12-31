@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../../pages/LoginPage';
-import { env } from '../../utils/env';
+import { LoginPage } from '@pages/LoginPage';
+import { env } from '@utils/env';
 
 test.describe('@regression', () => {
   test('User can login', async ({ page }) => {
