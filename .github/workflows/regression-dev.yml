@@ -27,5 +27,3 @@ jobs:
 
       - name: Run regression tests
         run: npx playwright test --grep @regression
-        env:
-          NODE_OPTIONS: "-r tsconfig-paths/register"
