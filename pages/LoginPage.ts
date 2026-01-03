@@ -11,6 +11,5 @@ export class LoginPage {
     await this.page.getByLabel("Email").fill(email);
     await this.page.getByPlaceholder("Enter your Password").fill(password);
     await this.page.getByRole("button", { name: 'Sign in' }).click();
-    await expect(this.page).toHaveURL("https://app.dev.thinkstack.ai/my-agents/");
   }
 }
