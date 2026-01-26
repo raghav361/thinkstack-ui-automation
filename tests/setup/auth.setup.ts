@@ -1,8 +1,8 @@
-import { test, expect } from '@playwright/test';
+import { test as setup, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/LoginPage';
 import { env } from '../../utils/env';
 
-test('User can see agent list', async ({ page }) => {
+setup('authenticate', async ({ page }) => {
   const login = new LoginPage(page);
 
   await page.goto(env.baseURL);
@@ -13,8 +13,5 @@ test('User can see agent list', async ({ page }) => {
     page.getByRole('heading', { name: /Create new agent/i })
   ).toBeVisible();
 
-  await expect(
-    page.getByRole('link', { name: /agent/i })
-  ).toBeVisible();
-
+  await page.context().storageState({ path: 'storageState.json' });
 });
