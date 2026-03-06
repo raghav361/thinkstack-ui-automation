@@ -5,4 +5,5 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 .env
+env/*.env
 storageState.json

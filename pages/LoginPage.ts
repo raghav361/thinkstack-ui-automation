@@ -1,10 +1,11 @@
-import { Page, expect } from '@playwright/test';
+import { Page } from '@playwright/test';
+import { routes } from '../utils/routes';
 
 export class LoginPage {
   constructor(private page: Page) {}
 
   async goto() {
-    await this.page.goto("https://app.dev.thinkstack.ai/login/");
+    await this.page.goto(routes.login);
   }
 
   async login(email: string, password: string) {

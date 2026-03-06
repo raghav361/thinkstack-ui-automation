@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { routes } from '../../utils/routes';
 
 test('User reaches agent dashboard', async ({ page }) => {
-  await page.goto('/my-agents');
+  await page.goto(routes.agents);
 
   // Assert we are NOT on login page
   await expect(

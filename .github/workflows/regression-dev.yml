@@ -1,4 +1,4 @@
-name: Thinkstack Dev Regression
+name: Thinkstack Regression
 
 on:
   push:

@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "cross-env ENV=dev playwright test",
+    "prod": "cross-env ENV=prod playwright test",
+    "dev:headed": "cross-env ENV=dev playwright test --headed",
+    "prod:headed": "cross-env ENV=prod playwright test --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.56.0",
     "@types/node": "^24.7.1",
+    "cross-env": "^10.1.0",
     "dotenv": "^17.2.3",
     "typescript": "^5.9.3"
   }

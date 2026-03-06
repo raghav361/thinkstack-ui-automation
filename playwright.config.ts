@@ -31,6 +31,7 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    baseURL: env.baseURL,
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure'
@@ -58,6 +59,16 @@ export default defineConfig({
     {
       name: 'product-regression',
       testMatch: 'tests/product/**/*.spec.ts',
+      dependencies: ['setup'],
+      use: {
+        browserName: 'chromium',
+        baseURL: env.baseURL,
+        storageState: 'storageState.json',
+      },
+    },
+    {
+      name: 'smoke',
+      testMatch: 'tests/smoke/**/*.spec.ts',
       dependencies: ['setup'],
       use: {
         browserName: 'chromium',
