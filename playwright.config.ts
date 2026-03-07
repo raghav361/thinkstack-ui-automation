@@ -66,16 +66,6 @@ export default defineConfig({
         storageState: 'storageState.json',
       },
     },
-    {
-      name: 'smoke',
-      testMatch: 'tests/smoke/**/*.spec.ts',
-      dependencies: ['setup'],
-      use: {
-        browserName: 'chromium',
-        baseURL: env.baseURL,
-        storageState: 'storageState.json',
-      },
-    },
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',

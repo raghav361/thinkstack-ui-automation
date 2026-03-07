@@ -8,5 +8,5 @@ test('User can login', async ({ page }) => {
   const login = new LoginPage(page);
   await login.goto();
   await login.login(env.user, env.password);
-  await expect(page).toHaveURL(env.baseURL + routes.agents);
+  await expect(page).toHaveURL(routes.agents);
 });
