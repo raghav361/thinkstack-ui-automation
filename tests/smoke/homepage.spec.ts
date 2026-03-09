@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { env } from '../../utils/env';
+import { env } from '../../config/env';
 import { logStep } from '../../utils/logger';
 import { log } from 'console';
 

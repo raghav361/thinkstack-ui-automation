@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-import { routes } from '../utils/routes';
+import { routes } from '../config/routes';
 
 export class LoginPage {
   constructor(private page: Page) {}

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { routes } from '../../utils/routes';
+import { routes } from '../../config/routes';
 import { logStep } from '../../utils/logger';
 import { log } from 'console';
 

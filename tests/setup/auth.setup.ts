@@ -1,6 +1,6 @@
 import { test as setup, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/LoginPage';
-import { env } from '../../utils/env';
+import { env } from '../../config/env';
 import { logStep } from '../../utils/logger';
 import { log } from 'console';
 

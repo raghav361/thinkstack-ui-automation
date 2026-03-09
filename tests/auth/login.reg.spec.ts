@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/LoginPage';
-import { env } from '../../utils/env';
-import { routes } from '../../utils/routes';
+import { env } from '../../config/env';
+import { routes } from '../../config/routes';
 import { logStep } from '../../utils/logger';
 import { log } from 'console';
 
