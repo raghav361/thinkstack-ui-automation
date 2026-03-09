@@ -3,10 +3,12 @@ import { LoginPage } from '../../pages/LoginPage';
 import { env } from '../../utils/env';
 import { routes } from '../../utils/routes';
 
-test('User can login', async ({ page }) => {
-  await page.goto(env.baseURL);
-  const login = new LoginPage(page);
-  await login.goto();
-  await login.login(env.user, env.password);
-  await expect(page).toHaveURL(routes.agents);
+test.describe('@auth', () => {
+  test('User can login', async ({ page }) => {
+    await page.goto(env.baseURL);
+    const login = new LoginPage(page);
+    await login.goto();
+    await login.login(env.user, env.password);
+    await expect(page).toHaveURL(routes.agents);
+  });  
 });
